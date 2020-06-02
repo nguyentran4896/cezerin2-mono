@@ -12,8 +12,8 @@ COPY yarn.lock ./
 # theme folder is copied first as it's used as a local dependency package
 COPY ./theme ./theme
 
-# installing packages (yarn causes problems here)
-RUN npm i
+# installing packages
+RUN yarn
 
 # If you are building your code for production
 # RUN npm ci --only=production
